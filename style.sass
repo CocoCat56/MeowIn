@@ -1,0 +1,266 @@
+$color-light-orange-bg: #FEF4E7
+$color-light-orange-navbar: #EFCCAB
+$color-brown: #BE6E41
+$color-yellow: #FEDA79
+$color-light-yellow: #FFA45D
+$color-white: #fff
+$color-black: #000
+$color-light-black: #54504A
+$color-dark-blue: #85A8AB
+
+body
+    font-size: 16px
+    background-color: rgba($color-light-orange-bg, 0.2)
+    box-sizing: border-box
+    color: $color-light-black
+    font-family: Recursive Sans Casual, "微軟正黑體"
+.carousel-inner
+    position: relative
+.carousel_content_frame
+    position: absolute
+    top: -23vw
+    left: 50%
+    transform: translateX(-50%)
+    border: 3px solid $color-white
+.carousel_content
+    background-color: rgba($color-black, 0.2)
+    border: 3px solid $color-white
+    margin: 0.2vw
+    padding: 2.5vw
+    h2
+        font-family: Harlow Solid
+        font-size: 3vw
+    p
+        font-size: 1vw
+// navbar
+.navbar_bg
+    background-color: $color-light-orange-navbar !important
+.navbar-brand
+    img
+        width: 160px
+.navbar-nav>a
+    color: $color-white !important
+    border-bottom: 3px solid transparent
+    margin-left: 2vw
+    &:hover
+        text-shadow: none
+        color: $color-brown !important
+        font-weight: bold
+        border-bottom: 3px solid $color-brown !important
+.navbar-toggler
+    margin-right: 10px
+    position: relative
+    outline: none
+    border: none
+    padding: 15px
+    .line
+        position: absolute
+        top: 5px
+        left: 50%
+        transform: translateX(-50%)
+        width: 30px
+        height: 5px
+        border-radius: 5px
+        background-color: $color-white
+        &:before, &:after
+            content: ""
+            display: block
+            position: absolute
+            top: 10px
+            width: 30px
+            height: 5px
+            border-radius: 5px
+            background-color: $color-white
+        &:after
+            top: 20px
+    &:focus
+        box-shadow: none
+        .line
+            top: 50%
+            transform: translateX(-50%) rotate(45deg)
+            background-color: $color-light-yellow
+            &:before
+                opacity: 0
+            &:after
+                top: 0
+                transform: rotate(90deg)
+                background-color: $color-light-yellow
+// 共用區
+.news, .recommend, .meowincat
+    width: 80%
+    margin: 0 auto
+    padding: 6vw 0
+    .card
+        border: none
+        text-align: justify
+        margin-bottom: 30px
+    h4
+        // font-size: 1.6vw
+        display: inline-block
+        padding: 10px 30px
+        margin-bottom: 6vw
+        color: $color-brown
+        border: 1px solid $color-light-yellow
+        background-color: rgba($color-white, 0.5)
+        position: relative
+        &:after
+            content: "最新消息"
+            color: transparent
+            position: absolute
+            bottom: -5px
+            right: -5px
+            z-index: -1
+            background-color: $color-yellow
+            padding: 10px 30px
+// news
+#news>img
+    position: absolute
+    width: 20%
+    left: -6%
+    top: 80%
+    transform: rotate(155deg)
+    z-index: 2
+#news
+    position: relative
+    .news>div:nth-of-type(2)
+        margin-top: 3vw
+        display: inline-block
+        a
+            text-decoration: none
+            color: $color-dark-blue
+            padding: 10px 15px
+            border: 1px solid $color-dark-blue
+            &:hover
+                background-color: $color-dark-blue
+                color: $color-white
+    .card-body
+        background-color: rgba($color-light-orange-bg, 0.7)
+        position: relative
+        .card_date
+            position: absolute
+            top: -25px
+            right: 0
+            padding: 3px 5px
+            border-top-left-radius: 5px
+            background-color: rgba($color-light-orange-bg, 1)
+        p
+            font-size: 14px
+        a
+            text-decoration: none
+            font-size: 14px
+            float: right
+            color: $color-dark-blue
+            span
+                display: flex
+                flex-direction: column
+                &:nth-child(2)
+                    width: 0
+                    height: 3px
+                    background-color: $color-dark-blue
+                    opacity: 0
+                    transition: all 0.5s
+            &:hover
+                font-weight: bold
+                span:nth-child(2)
+                    opacity: 1
+                    width: 100%
+// recommend
+#recommend
+    position: relative
+.recommend_bg
+    width: 100%
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    z-index: -2
+    background-color: rgba($color-light-orange-bg, 0.8)
+.recommend
+    position: relative
+.recommend>img
+    position: absolute
+    bottom: -2px
+    right: 0
+    width: 25%
+    z-index: 2
+.recommend_text
+    padding: 60px 10px
+    margin-top: 30px
+    margin-left: -50px
+    background-color: $color-light-orange-bg
+    h5
+        color: $color-brown
+        font-weight: bold
+    p
+        font-size: 14px
+// meowincat
+#meowincat
+    border-top: 2px solid $color-light-yellow
+    position: relative
+    .circle
+        position: absolute
+        top: 50%
+        left: 63%
+        background-color: rgba($color-light-yellow, 0.6)
+        z-index: 6
+        padding: 5vw
+        border-radius: 100% 
+.meowincat
+    .row>div:nth-of-type(2), .col-12
+        position: relative
+    .col-md-6
+        padding: 0
+    h5
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        color: $color-white
+        z-index: 10
+// footer
+footer
+    margin-top: 5vw
+    margin-bottom: -20px
+    padding: 20px
+    background-color: $color-light-orange-navbar
+    color: $color-white
+    font-size: 14px
+    position: relative
+    img
+        margin-bottom: 20px
+        width: 200px
+    p
+        margin-bottom: 5px
+    a
+        text-decoration: none
+        color: $color-white
+        border-bottom: 2px solid $color-white
+        &:hover
+            color: $color-brown
+            border-bottom: 2px solid $color-brown
+    .footer_cat
+        position: absolute
+        bottom: 120px
+        left: 15%
+        z-index: -1
+        img
+            &:nth-child(1)
+                width: 10vw
+            &:nth-child(2)
+                width: 6vw
+                margin-left: -20px
+@media screen and (max-width: 992px)
+    // navbar
+    .navbar-nav>a
+        margin-left: 0
+        text-align: center
+        border: none !important
+        &:hover
+            border: none !important
+@media screen and (max-width: 768px)
+    .recommend_text
+        margin-left: 0px
+        padding: 40px
+        background-color: transparent
+        p
+            margin-top: 20px
