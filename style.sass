@@ -198,25 +198,26 @@ body
             background-color: rgba($color-light-orange-bg, 1)
         p
             font-size: 14px
-        a
-            text-decoration: none
-            font-size: 14px
-            float: right
-            color: $color-dark-blue
-            span
-                display: flex
-                flex-direction: column
-                &:nth-child(2)
-                    width: 0
-                    height: 3px
-                    background-color: $color-dark-blue
-                    opacity: 0
-                    transition: all 0.5s
-            &:hover
-                font-weight: bold
-                span:nth-child(2)
-                    opacity: 1
-                    width: 100%
+#news .card-body, .recommend_text
+    a
+        text-decoration: none
+        font-size: 14px
+        float: right
+        color: $color-dark-blue
+        span
+            display: flex
+            flex-direction: column
+            &:nth-child(2)
+                width: 0
+                height: 3px
+                background-color: $color-dark-blue
+                opacity: 0
+                transition: all 0.5s
+        &:hover
+            font-weight: bold
+            span:nth-child(2)
+                opacity: 1
+                width: 100%
 // recommend
 #recommend
     position: relative
@@ -232,12 +233,11 @@ body
     position: relative
 .recommend>img
     position: absolute
-    bottom: -2px
+    bottom: 0
     right: 0
-    width: 25%
-    z-index: 2
+    width: 20%
 .recommend_text
-    padding: 60px 10px
+    padding: 80px 10px
     margin-top: 30px
     margin-left: -50px
     background-color: $color-light-orange-bg
@@ -247,6 +247,8 @@ body
         font-weight: bold
     p
         font-size: 14px
+    a
+        margin-top: 10px
     &:before, &:after
         content: ""
         display: block
@@ -265,7 +267,6 @@ body
         border-top: 1px solid $color-brown
 // meowincat
 #meowincat
-    border-top: 2px solid $color-light-yellow
     position: relative
     overflow: hidden
     padding-bottom: 5vw
@@ -328,7 +329,12 @@ footer
         border: none !important
         &:hover
             border: none !important
+@media screen and (max-width: 900px)
+    .recommend>img
+        width: 18%
 @media screen and (max-width: 768px)
+    .recommend>img
+        z-index: -1
     .recommend_text
         margin-left: 0px
         padding: 40px

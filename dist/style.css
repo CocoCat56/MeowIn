@@ -246,27 +246,28 @@ body {
 #news .card-body p {
   font-size: 14px;
 }
-#news .card-body a {
+
+#news .card-body a, .recommend_text a {
   text-decoration: none;
   font-size: 14px;
   float: right;
   color: #85A8AB;
 }
-#news .card-body a span {
+#news .card-body a span, .recommend_text a span {
   display: flex;
   flex-direction: column;
 }
-#news .card-body a span:nth-child(2) {
+#news .card-body a span:nth-child(2), .recommend_text a span:nth-child(2) {
   width: 0;
   height: 3px;
   background-color: #85A8AB;
   opacity: 0;
   transition: all 0.5s;
 }
-#news .card-body a:hover {
+#news .card-body a:hover, .recommend_text a:hover {
   font-weight: bold;
 }
-#news .card-body a:hover span:nth-child(2) {
+#news .card-body a:hover span:nth-child(2), .recommend_text a:hover span:nth-child(2) {
   opacity: 1;
   width: 100%;
 }
@@ -291,14 +292,13 @@ body {
 
 .recommend > img {
   position: absolute;
-  bottom: -2px;
+  bottom: 0;
   right: 0;
-  width: 25%;
-  z-index: 2;
+  width: 20%;
 }
 
 .recommend_text {
-  padding: 60px 10px;
+  padding: 80px 10px;
   margin-top: 30px;
   margin-left: -50px;
   background-color: #FEF4E7;
@@ -310,6 +310,9 @@ body {
 }
 .recommend_text p {
   font-size: 14px;
+}
+.recommend_text a {
+  margin-top: 10px;
 }
 .recommend_text:before, .recommend_text:after {
   content: "";
@@ -332,7 +335,6 @@ body {
 }
 
 #meowincat {
-  border-top: 2px solid #FFA45D;
   position: relative;
   overflow: hidden;
   padding-bottom: 5vw;
@@ -410,7 +412,16 @@ footer .footer_cat img:nth-child(2) {
     border: none !important;
   }
 }
+@media screen and (max-width: 900px) {
+  .recommend > img {
+    width: 18%;
+  }
+}
 @media screen and (max-width: 768px) {
+  .recommend > img {
+    z-index: -1;
+  }
+
   .recommend_text {
     margin-left: 0px;
     padding: 40px;
