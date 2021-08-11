@@ -132,11 +132,68 @@ body {
 
 #news > img {
   position: absolute;
+}
+
+#news > img:first-child {
   width: 20%;
   left: -6%;
   top: 80%;
   transform: rotate(155deg);
   z-index: 2;
+}
+
+#news > img:nth-child(2) {
+  width: 3vw;
+  position: fixed;
+  top: 630px;
+  left: 1030px;
+  z-index: -5;
+  transform: rotate(15deg);
+}
+
+#news > img:nth-child(3) {
+  width: 2.5vw;
+  position: fixed;
+  top: 280px;
+  left: 130px;
+  z-index: -5;
+  transform: rotate(-15deg);
+}
+
+#news > img:nth-child(4) {
+  width: 3vw;
+  position: fixed;
+  top: 30px;
+  left: 1230px;
+  z-index: -5;
+  transform: rotate(80deg);
+}
+
+#news > img:nth-child(5) {
+  width: 3.5vw;
+  position: fixed;
+  top: 500px;
+  left: 1260px;
+  z-index: -5;
+  transform: rotate(120deg);
+}
+
+#news > img:nth-child(6) {
+  width: 3vw;
+  position: fixed;
+  top: 100px;
+  left: 430px;
+  z-index: -5;
+  transform: rotate(220deg);
+}
+
+#news > img:nth-child(7) {
+  width: 4vw;
+  position: fixed;
+  top: 320px;
+  left: 580px;
+  z-index: -5;
+  transform: rotate(220deg);
 }
 
 #news {
@@ -207,7 +264,7 @@ body {
   top: 0;
   left: 0;
   z-index: -2;
-  background-color: rgba(254, 244, 231, 0.8);
+  background-color: #FEF4E7;
 }
 
 .recommend {
@@ -227,6 +284,7 @@ body {
   margin-top: 30px;
   margin-left: -50px;
   background-color: #FEF4E7;
+  position: relative;
 }
 .recommend_text h5 {
   color: #BE6E41;
@@ -235,18 +293,39 @@ body {
 .recommend_text p {
   font-size: 14px;
 }
+.recommend_text:before, .recommend_text:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 10px;
+  right: -10px;
+  width: 10%;
+  height: 30%;
+}
+.recommend_text:after {
+  border-right: 1px solid #BE6E41;
+  border-bottom: 1px solid #BE6E41;
+}
+.recommend_text:before {
+  top: 10px;
+  left: 10px;
+  border-left: 1px solid #BE6E41;
+  border-top: 1px solid #BE6E41;
+}
 
 #meowincat {
   border-top: 2px solid #FFA45D;
   position: relative;
+  overflow: hidden;
+  padding-bottom: 5vw;
 }
-#meowincat .circle {
+#meowincat #circle {
   position: absolute;
-  top: 50%;
-  left: 63%;
+  top: 0px;
+  left: 0px;
   background-color: rgba(255, 164, 93, 0.6);
-  z-index: 6;
-  padding: 5vw;
+  z-index: 3;
+  padding: 6vw;
   border-radius: 100%;
 }
 
@@ -262,11 +341,10 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
-  z-index: 10;
+  z-index: 5;
 }
 
 footer {
-  margin-top: 5vw;
   margin-bottom: -20px;
   padding: 20px;
   background-color: #EFCCAB;
@@ -294,7 +372,7 @@ footer .footer_cat {
   position: absolute;
   bottom: 120px;
   left: 15%;
-  z-index: -1;
+  z-index: 5;
 }
 footer .footer_cat img:nth-child(1) {
   width: 10vw;

@@ -95,7 +95,6 @@ body
         text-align: justify
         margin-bottom: 30px
     h4
-        // font-size: 1.6vw
         display: inline-block
         padding: 10px 30px
         margin-bottom: 6vw
@@ -115,11 +114,54 @@ body
 // news
 #news>img
     position: absolute
+#news>img:first-child
     width: 20%
     left: -6%
     top: 80%
     transform: rotate(155deg)
     z-index: 2
+#news>img:nth-child(2)
+    width: 3vw
+    position: fixed
+    top: 630px
+    left: 1030px
+    z-index: -5
+    transform: rotate(15deg)
+#news>img:nth-child(3)
+    width: 2.5vw
+    position: fixed
+    top: 280px
+    left: 130px
+    z-index: -5
+    transform: rotate(-15deg)
+#news>img:nth-child(4)
+    width: 3vw
+    position: fixed
+    top: 30px
+    left: 1230px
+    z-index: -5
+    transform: rotate(80deg)
+#news>img:nth-child(5)
+    width: 3.5vw
+    position: fixed
+    top: 500px
+    left: 1260px
+    z-index: -5
+    transform: rotate(120deg)
+#news>img:nth-child(6)
+    width: 3vw
+    position: fixed
+    top: 100px
+    left: 430px
+    z-index: -5
+    transform: rotate(220deg)
+#news>img:nth-child(7)
+    width: 4vw
+    position: fixed
+    top: 320px
+    left: 580px
+    z-index: -5
+    transform: rotate(220deg)
 #news
     position: relative
     .news>div:nth-of-type(2)
@@ -174,7 +216,7 @@ body
     top: 0
     left: 0
     z-index: -2
-    background-color: rgba($color-light-orange-bg, 0.8)
+    background-color: $color-light-orange-bg
 .recommend
     position: relative
 .recommend>img
@@ -188,22 +230,41 @@ body
     margin-top: 30px
     margin-left: -50px
     background-color: $color-light-orange-bg
+    position: relative
     h5
         color: $color-brown
         font-weight: bold
     p
         font-size: 14px
+    &:before, &:after
+        content: ""
+        display: block
+        position: absolute
+        bottom: 10px
+        right: -10px
+        width: 10%
+        height: 30%
+    &:after
+        border-right: 1px solid $color-brown
+        border-bottom: 1px solid $color-brown
+    &:before
+        top: 10px
+        left: 10px
+        border-left: 1px solid $color-brown
+        border-top: 1px solid $color-brown
 // meowincat
 #meowincat
     border-top: 2px solid $color-light-yellow
     position: relative
-    .circle
+    overflow: hidden
+    padding-bottom: 5vw
+    #circle
         position: absolute
-        top: 50%
-        left: 63%
+        top: 0px
+        left: 0px
         background-color: rgba($color-light-yellow, 0.6)
-        z-index: 6
-        padding: 5vw
+        z-index: 3
+        padding: 6vw
         border-radius: 100% 
 .meowincat
     .row>div:nth-of-type(2), .col-12
@@ -216,10 +277,9 @@ body
         left: 50%
         transform: translate(-50%, -50%)
         color: $color-white
-        z-index: 10
+        z-index: 5
 // footer
 footer
-    margin-top: 5vw
     margin-bottom: -20px
     padding: 20px
     background-color: $color-light-orange-navbar
@@ -242,7 +302,7 @@ footer
         position: absolute
         bottom: 120px
         left: 15%
-        z-index: -1
+        z-index: 5
         img
             &:nth-child(1)
                 width: 10vw
