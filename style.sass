@@ -281,15 +281,28 @@ body
 .meowincat
     .row>div:nth-of-type(2), .col-12
         position: relative
+        h5
+            position: absolute
+            top: 60%
+            left: 50%
+            transform: translate(-50%, -50%)
+            color: $color-white
+            z-index: 5
+            opacity: 0
+            transition: all 0.8s ease-in
+        &:hover
+            h5
+                opacity: 1
+                top: 50%
     .col-md-6
         padding: 0
-    h5
-        position: absolute
-        top: 50%
-        left: 50%
-        transform: translate(-50%, -50%)
-        color: $color-white
-        z-index: 5
+    .cat
+        overflow: hidden
+        img
+            transition: all 0.8s ease-in
+        &:hover
+            img
+                transform: scale(1.2)
 // footer
 footer
     margin-bottom: -20px
