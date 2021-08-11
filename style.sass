@@ -162,6 +162,17 @@ body
     left: 580px
     z-index: -5
     transform: rotate(220deg)
+.visible
+    opacity: 0
+.fadeInUp 
+    animation: fadeInUp 1s running
+@keyframes fadeInUp 
+    from
+        opacity: 0
+        transform: translate3d(0, 30%, 0)
+    to 
+        opacity: 1
+        transform: none
 #news
     position: relative
     .news>div:nth-of-type(2)
@@ -324,3 +335,6 @@ footer
         background-color: transparent
         p
             margin-top: 20px
+    #meowincat
+        #circle
+            padding: 9vw 

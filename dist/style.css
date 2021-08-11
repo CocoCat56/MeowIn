@@ -196,6 +196,24 @@ body {
   transform: rotate(220deg);
 }
 
+.visible {
+  opacity: 0;
+}
+
+.fadeInUp {
+  animation: fadeInUp 1s running;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 30%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
 #news {
   position: relative;
 }
@@ -400,5 +418,9 @@ footer .footer_cat img:nth-child(2) {
   }
   .recommend_text p {
     margin-top: 20px;
+  }
+
+  #meowincat #circle {
+    padding: 9vw;
   }
 }
