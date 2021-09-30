@@ -8,21 +8,6 @@ $color-black: #000
 $color-light-black: #54504A
 $color-dark-blue: #85A8AB
 
-body
-    font-size: 16px
-    background-color: rgba($color-light-orange-bg, 0.2)
-    box-sizing: border-box
-    color: $color-light-black
-    font-family: Recursive Sans Casual, "微軟正黑體"
-    position: relative
-.top_btn
-    position: fixed
-    bottom: 3vw
-    right: 3vw
-    width: 60px
-    z-index: 10 
-.hidden_btn
-    display: none
 .carousel-inner
     position: relative
 .carousel_content_frame
@@ -41,72 +26,19 @@ body
         font-size: 3vw
     p
         font-size: 1vw
-// navbar
-.navbar_bg
-    background-color: $color-light-orange-navbar !important
-.navbar-brand
-    img
-        width: 160px
-.navbar-nav>a
-    color: $color-white !important
-    border-bottom: 3px solid transparent
-    margin-left: 2vw
-    &:hover
-        text-shadow: none
-        color: $color-brown !important
-        font-weight: bold
-        border-bottom: 3px solid $color-brown !important
-.navbar-toggler
-    margin-right: 10px
-    position: relative
-    outline: none
-    border: none
-    padding: 15px
-    .line
-        position: absolute
-        top: 5px
-        left: 50%
-        transform: translateX(-50%)
-        width: 30px
-        height: 5px
-        border-radius: 5px
-        background-color: $color-white
-        &:before, &:after
-            content: ""
-            display: block
-            position: absolute
-            top: 10px
-            width: 30px
-            height: 5px
-            border-radius: 5px
-            background-color: $color-white
-        &:after
-            top: 20px
-    &:focus
-        box-shadow: none
-        .line
-            top: 50%
-            transform: translateX(-50%) rotate(45deg)
-            background-color: $color-light-yellow
-            &:before
-                opacity: 0
-            &:after
-                top: 0
-                transform: rotate(90deg)
-                background-color: $color-light-yellow
 // 共用區
 .news, .recommend, .meowincat
     width: 80%
     margin: 0 auto
-    padding: 6vw 0
+    padding: 6rem 0 10rem 0
     .card
         border: none
         text-align: justify
-        margin-bottom: 30px
+        margin-bottom: 3rem
     h4
         display: inline-block
         padding: 10px 30px
-        margin-bottom: 6vw
+        margin-bottom: 5.5rem
         color: $color-brown
         border: 1px solid $color-light-yellow
         background-color: rgba($color-white, 0.5)
@@ -120,57 +52,6 @@ body
             z-index: -1
             background-color: $color-yellow
             padding: 10px 30px
-// news
-#news>img
-    position: absolute
-#news>img:first-child
-    width: 20%
-    left: -6%
-    top: 80%
-    transform: rotate(155deg)
-    z-index: 2
-#news>img:nth-child(2)
-    width: 3vw
-    position: fixed
-    top: 630px
-    left: 1030px
-    z-index: -5
-    transform: rotate(15deg)
-#news>img:nth-child(3)
-    width: 2.5vw
-    position: fixed
-    top: 280px
-    left: 130px
-    z-index: -5
-    transform: rotate(-15deg)
-#news>img:nth-child(4)
-    width: 3vw
-    position: fixed
-    top: 30px
-    left: 1230px
-    z-index: -5
-    transform: rotate(80deg)
-#news>img:nth-child(5)
-    width: 3.5vw
-    position: fixed
-    top: 500px
-    left: 1260px
-    z-index: -5
-    transform: rotate(120deg)
-#news>img:nth-child(6)
-    width: 3vw
-    position: fixed
-    top: 100px
-    left: 430px
-    z-index: -5
-    transform: rotate(220deg)
-#news>img:nth-child(7)
-    width: 4vw
-    position: fixed
-    top: 320px
-    left: 580px
-    z-index: -5
-    transform: rotate(220deg)
 .visible
     opacity: 0
 .fadeInUp 
@@ -182,6 +63,13 @@ body
     to 
         opacity: 1
         transform: none
+#news>img:first-child
+    position: absolute
+    width: 20%
+    left: -6%
+    top: 80%
+    transform: rotate(155deg)
+    z-index: 2
 #news
     position: relative
     .news>div:nth-of-type(2)
@@ -312,45 +200,7 @@ body
         &:hover
             img
                 transform: scale(1.2)
-// footer
-footer
-    margin-bottom: -20px
-    padding: 20px
-    background-color: $color-light-orange-navbar
-    color: $color-white
-    font-size: 14px
-    position: relative
-    img
-        margin-bottom: 20px
-        width: 200px
-    p
-        margin-bottom: 5px
-    a
-        text-decoration: none
-        color: $color-white
-        border-bottom: 2px solid $color-white
-        &:hover
-            color: $color-brown
-            border-bottom: 2px solid $color-brown
-    .footer_cat
-        position: absolute
-        bottom: 120px
-        left: 15%
-        z-index: 5
-        img
-            &:nth-child(1)
-                width: 10vw
-            &:nth-child(2)
-                width: 6vw
-                margin-left: -20px
-@media screen and (max-width: 992px)
-    // navbar
-    .navbar-nav>a
-        margin-left: 0
-        text-align: center
-        border: none !important
-        &:hover
-            border: none !important
+
 @media screen and (max-width: 900px)
     .recommend>img
         width: 18%

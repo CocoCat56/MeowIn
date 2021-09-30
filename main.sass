@@ -1,0 +1,188 @@
+$color-light-orange-bg: #FEF4E7
+$color-light-orange-navbar: #EFCCAB
+$color-brown: #BE6E41
+$color-yellow: #FEDA79
+$color-light-yellow: #FFA45D
+$color-white: #fff
+$color-black: #000
+$color-light-black: #54504A
+$color-dark-blue: #85A8AB
+
+body
+    font-size: 16px
+    background-color: rgba($color-light-orange-bg, 0.2)
+    box-sizing: border-box
+    color: $color-light-black
+    font-family: Recursive Sans Casual, "微軟正黑體"
+    position: relative
+.top_btn
+    position: fixed
+    bottom: 3vw
+    right: 3vw
+    width: 60px
+    z-index: 10 
+.hidden_btn
+    display: none
+
+body>img:first-child
+    width: 3vw
+    position: fixed
+    top: 630px
+    left: 1030px
+    z-index: -5
+    transform: rotate(15deg)
+body>img:nth-child(2)
+    width: 2.5vw
+    position: fixed
+    top: 280px
+    left: 130px
+    z-index: -5
+    transform: rotate(-15deg)
+body>img:nth-child(3)
+    width: 3vw
+    position: fixed
+    top: 30px
+    left: 1230px
+    z-index: -5
+    transform: rotate(80deg)
+body>img:nth-child(4)
+    width: 3.5vw
+    position: fixed
+    top: 500px
+    left: 1260px
+    z-index: -5
+    transform: rotate(120deg)
+body>img:nth-child(5)
+    width: 3vw
+    position: fixed
+    top: 100px
+    left: 430px
+    z-index: -5
+    transform: rotate(220deg)
+body>img:nth-child(6)
+    width: 4vw
+    position: fixed
+    top: 320px
+    left: 580px
+    z-index: -5
+    transform: rotate(220deg)
+
+// navbar
+.navbar_bg
+    background-color: $color-light-orange-navbar !important
+.navbar-brand
+    img
+        width: 160px
+.navbar-nav>a
+    color: $color-white !important
+    border-bottom: 3px solid transparent
+    margin-left: 2vw
+    &:hover
+        text-shadow: none
+        color: $color-brown !important
+        font-weight: bold
+        border-bottom: 3px solid $color-brown !important
+.navbar-toggler
+    margin-right: 10px
+    position: relative
+    outline: none
+    border: none
+    padding: 15px
+    .line
+        position: absolute
+        top: 5px
+        left: 50%
+        transform: translateX(-50%)
+        width: 30px
+        height: 5px
+        border-radius: 5px
+        background-color: $color-white
+        &:before, &:after
+            content: ""
+            display: block
+            position: absolute
+            top: 10px
+            width: 30px
+            height: 5px
+            border-radius: 5px
+            background-color: $color-white
+        &:after
+            top: 20px
+    &:focus
+        box-shadow: none
+        .line
+            top: 50%
+            transform: translateX(-50%) rotate(45deg)
+            background-color: $color-light-yellow
+            &:before
+                opacity: 0
+            &:after
+                top: 0
+                transform: rotate(90deg)
+                background-color: $color-light-yellow
+// footer
+footer
+    margin-bottom: -20px
+    padding: 20px
+    background-color: $color-light-orange-navbar
+    color: $color-white
+    font-size: 14px
+    position: relative
+    img
+        margin-bottom: 20px
+        width: 200px
+    p
+        margin-bottom: 5px
+    a
+        text-decoration: none
+        color: $color-white
+        border-bottom: 2px solid $color-white
+        &:hover
+            color: $color-brown
+            border-bottom: 2px solid $color-brown
+    .footer_cat
+        position: absolute
+        bottom: 120px
+        left: 15%
+        z-index: 5
+        img
+            &:nth-child(1)
+                width: 10vw
+            &:nth-child(2)
+                width: 6vw
+                margin-left: -20px
+
+// header
+.header
+    width: 100%
+    position: relative
+    overflow: hidden
+    img
+        width: 100%
+        height: 16rem
+        object-fit: cover
+        transition: transform 1s ease
+    h1
+        color: $color-white
+        position: absolute
+        top: 50%
+        left: 50%
+        z-index: 2
+        transform: translate(-50%, -50%)
+    .header_bg
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-color: rgba( $color-brown, .3)
+.size
+    transform: scale(1.5)
+@media screen and (max-width: 992px)
+    // navbar
+    .navbar-nav>a
+        margin-left: 0
+        text-align: center
+        border: none !important
+        &:hover
+            border: none !important
