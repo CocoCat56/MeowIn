@@ -1,0 +1,43 @@
+#story {
+  padding: 9rem 0 15rem 0;
+  background-color: rgba(239, 204, 171, 0.2);
+}
+
+.story {
+  width: 80%;
+  margin: 0 auto;
+}
+.story .story_content {
+  width: 60%;
+  padding: 5rem 1rem;
+  margin: 0 auto;
+  line-height: 1.5;
+  position: relative;
+  background-color: #fff;
+  box-shadow: 5px 5px 20px #EFCCAB;
+  transform: rotate(1.5deg);
+}
+.story .story_content i {
+  font-size: 3rem;
+  position: absolute;
+  top: -1.7rem;
+  left: 45%;
+  transform: rotate(-10deg);
+  color: #BE6E41;
+}
+
+@media screen and (max-width: 1200px) {
+  #story .story_content {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #story .story_content {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 900px) {
+  #story .story_content {
+    width: 85%;
+  }
+}
