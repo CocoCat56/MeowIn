@@ -14,10 +14,17 @@
   <title>MeowIn café</title>
   <link rel="shortcut icon" href="./images/favicon.ico">
   <link rel="stylesheet" href="./bootstrap-5.0.0-beta3-dist/css/bootstrap.css">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./main.css">
+  <link rel="stylesheet" href="./index.css">
 </head>
 
 <body>
+  <img src="./images/bgi1.svg">
+  <img src="./images/bgi2.svg">
+  <img src="./images/bgi3.svg"> 
+  <img src="./images/bgi4.svg">
+  <img src="./images/bgi5.svg">
+  <img src="./images/bgi6.svg">
   <!-- carousel start-->
   <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
     <div class="carousel-indicators">
@@ -72,10 +79,10 @@
       </button>
       <div class="collapse navbar-collapse d-lg-flex justify-content-lg-end" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-link" href="#">貓癮故事</a>
-          <a class="nav-link" href="#">最新消息</a>
-          <a class="nav-link" href="#">貓癮菜單</a>
-          <a class="nav-link" href="#">聯絡貓癮</a>
+          <a class="nav-link" href="./story.html">貓癮故事</a>
+          <a class="nav-link" href="./news.html">最新消息</a>
+          <a class="nav-link" href="./menu.html">貓癮菜單</a>
+          <a class="nav-link" href="./contact.html">聯絡貓癮</a>
         </div>
       </div>
     </div>
@@ -86,13 +93,7 @@
     </a>
   </div>
   <section id="news">
-    <img src="./images/circle.svg">
-    <img src="./images/bgi1.svg" alt="">
-    <img src="./images/bgi2.svg" alt="">
-    <img src="./images/bgi3.svg" alt="">
-    <img src="./images/bgi4.svg" alt="">
-    <img src="./images/bgi5.svg" alt="">
-    <img src="./images/bgi6.svg" alt="">
+    <img src="./images/circle.svg" class="d-none d-xl-block">
     <div class="container-xl">
       <div class="news text-center">
         <h4>最新消息</h4>
@@ -113,7 +114,7 @@
           </div>
           <div class="col-lg-3 col-md-4 col-sm-6 visible">
             <div class="card">
-              <img src="./images//news2.jpg" class="card-img-top" alt="...">
+              <img src="./images/news2.jpg" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">8月壽星好禮</h5>
                 <p class="card_date">2021/07/30</p>
@@ -127,7 +128,7 @@
           </div>
           <div class="col-lg-3 col-md-4 col-sm-6 visible">
             <div class="card">
-              <img src="./images//news3.jpg" class="card-img-top" alt="...">
+              <img src="./images/news3.jpg" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">喵店長生日</h5>
                 <p class="card_date">2021/07/20</p>
@@ -141,7 +142,7 @@
           </div>
           <div class="col-lg-3 col-md-4 col-sm-6 visible">
             <div class="card">
-              <img src="./images//news4.jpg" class="card-img-top" alt="...">
+              <img src="./images/news4.jpg" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">夏季精選咖啡</h5>
                 <p class="card_date">2021/07/01</p>
@@ -155,7 +156,7 @@
           </div>
         </div>
         <div class="text-center">
-          <a href="#">VIEW MORE</a>
+          <a href="./news.html">VIEW MORE</a>
         </div>
       </div>
     </div>
@@ -167,7 +168,7 @@
         <h4>今月推薦</h4>
         <div class="row">
           <div class="col-md-6">
-            <img src="./images/image1.jpg" class="img-fluid" alt="">
+            <img src="./images/image1.jpg" class="img-fluid">
           </div>
           <div class="col-md-6 visible">
             <div class="recommend_text">
@@ -190,7 +191,7 @@
             </div>
           </div>
         </div>
-        <img src="./images/cat2.svg" alt="">
+        <img src="./images/cat2.svg" class="d-none d-md-block">
       </div>
     </div>
   </section>
@@ -204,12 +205,12 @@
             <div class="row">
               <div class="col-12">
                 <div class="cat">
-                  <img src="./images/image2.jpg" class="img-fluid" alt="">
+                  <img src="./images/image2.jpg" class="img-fluid">
                 </div>
               </div>
               <div class="col-12">
                 <div class="cat">
-                  <img src="./images/cat02.jpg" class="img-fluid" alt="">
+                  <img src="./images/cat02.jpg" class="img-fluid">
                 </div>
                 <h5>撒嬌的卡布</h5>
               </div>
@@ -217,7 +218,7 @@
           </div>
           <div class="col-md-6">
             <div class="cat">
-              <img src="./images/cat01.jpg" class="img-fluid" alt="">
+              <img src="./images/cat01.jpg" class="img-fluid">
             </div>
             <h5>沉思的奇諾</h5>
           </div>
@@ -228,8 +229,8 @@
   <footer>
     <div class="container-xl text-center">
       <div class="footer_cat d-none d-md-block">
-        <img src="./images/cat1.svg" alt="">
-        <img src="./images/cat1.svg" alt="">
+        <img src="./images/cat1.svg">
+        <img src="./images/cat1.svg">
       </div>
       <img src="./images/logo.png" alt="logo">
       <p>圖片來源： <a href="https://unsplash.com/" target="_blank">Unsplash</a>，網站僅用來做為學習用途。</p>
