@@ -1,0 +1,48 @@
+$color-light-orange-bg: #FEF4E7
+$color-light-orange-navbar: #EFCCAB
+$color-brown: #BE6E41
+$color-yellow: #FEDA79
+$color-light-yellow: #FFA45D
+$color-white: #fff
+$color-black: #000
+$color-light-black: #54504A
+$color-dark-blue: #85A8AB
+
+#contact
+    padding: 6rem 0 10rem 0
+    background-color: rgba($color-light-orange-navbar, .2)
+    .contact
+        width: 80%
+        margin: 0 auto
+    .info, .contact_form
+        padding: 3rem
+        h4
+            color: $color-brown
+        i
+            color: $color-brown
+    .info
+        background-color: $color-light-orange-bg
+    .contact_form
+        background-color: $color-white
+        box-shadow: 5px 5px 20px $color-light-orange-navbar
+        input, textarea
+            border: 0
+            border-bottom: 1px solid $color-brown
+            box-shadow: none
+            border-radius: 0
+        textarea
+            height: 100px
+        .form-floating .col-md-6
+            label
+                padding-left: 16px
+        button
+            width: 100%
+            box-shadow: none
+            color: $color-white
+            background-color: $color-dark-blue
+            border-radius: 0
+            border: 2px solid $color-dark-blue
+            &:hover
+                background-color: $color-white
+                color: $color-dark-blue
+                font-weight: bold
