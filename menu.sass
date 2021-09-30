@@ -1,0 +1,77 @@
+$color-light-orange-bg: #FEF4E7
+$color-light-orange-navbar: #EFCCAB
+$color-brown: #BE6E41
+$color-yellow: #FEDA79
+$color-light-yellow: #FFA45D
+$color-white: #fff
+$color-black: #000
+$color-light-black: #54504A
+$color-dark-blue: #85A8AB
+
+#menu
+    padding: 6rem 0 10rem 0
+.menu
+    width: 80%
+    margin: 0 auto
+    .row:first-child
+        margin-bottom: 2rem
+    .col-sm-6
+        padding: 0
+    .menu_content
+        padding: 0px
+        position: relative
+        &:hover
+            .menu_bg
+                background-color: $color-brown
+        img
+            width: 100%
+    .menu_bg
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-color: rgba( $color-brown, .3)
+        transition: .8s
+    .detail
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        z-index: 2
+        table
+            color: $color-white
+            width: 20rem
+            tr>th
+                font-size: 20px
+            td
+                padding: 5px
+            tbody
+                tr>td:nth-child(2)
+                    text-align: right
+            &:hover
+                tr td
+                    color: $color-white
+@media screen and (max-width: 1200px)
+    .menu .detail table
+        width: 30rem
+        td
+            padding: 10px
+@media screen and (max-width: 900px)
+    .menu .detail table
+        width: 25rem
+        td
+            padding: 5px
+@media screen and (max-width: 700px)
+    .menu .detail table
+        width: 20rem
+@media screen and (max-width: 500px)
+    .menu .detail table
+        width: 16rem
+        td
+            padding: 1px
+@media screen and (max-width: 500px)
+    .menu .detail table
+        width: 15rem
+        td
+            padding: 0px
